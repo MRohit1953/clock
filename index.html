@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #fff;
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      background-color: #ccc;
+      color: #fff;
+    }
+
+    .toggle-mode {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .toggle-mode input {
+      display: none;
+    }
+
+    .toggle-mode label {
+      cursor: pointer;
+      background-color: #fff;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: block;
+      float: left;
+      margin: 10px 10px 0 0;
+    }
+
+    .toggle-mode label:before {
+      content: "";
+      display: block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #ccc;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .toggle-mode input:checked + label:before {
+      background-color: #fff;
+    }
+  </style>
+  <script>
+    function toggleMode() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('dark');
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <div class="toggle-mode">
+      <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+      <label for="mode-toggle">Light/Dark Mode</label>
+    </div>
+  </nav>
+  <main>
+    <section id="home">
+      <h1>Welcome to my website!</h1>
+      <p>This is a responsive website with a navigation bar that supports light and dark mode.</p>
+    </section>
+    <section id="about">
+      <h1>About Me</h1>
+      <p>I'm a large language model, also known as a conversational AI or chatbot trained to be informative and comprehensive. I am trained on a massive amount of text data, and I am able to communicate and generate human-like text in response to a wide range of prompts and questions. For example, I can provide summaries of factual topics or create stories.</p>
+    </section>
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <p>If you have any questions or comments, please feel free to contact me.</p>
+    </section>
+  </main>
+</body>
+</html>
