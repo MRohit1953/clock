@@ -1,108 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {margin:0;}
 
-    nav {
-      background-color: #fff;
-      height: 50px;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #ccc;
-    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1212128c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
 
-    nav a {
-      display: block;
-      padding: 15px 20px;
-      text-decoration: none;
-      color: #333;
-    }
+li {
+  float: right;
+}
+.logo{
+  color: white;
+  text-decoration: none;
+  padding:12px 16px;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 20px;
 
-    nav a:hover {
-      background-color: #ccc;
-      color: #fff;
-    }
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-    .toggle-mode {
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: flex;
-      align-items: center;
-    }
+li a:hover:not(.active) {
+  background-color: #111;
+}
 
-    .toggle-mode input {
-      display: none;
-    }
+.active {
+  background-color: #04AA6D;
+}
 
-    .toggle-mode label {
-      cursor: pointer;
-      background-color: #fff;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px 10px 0 0;
-    }
-
-    .toggle-mode label:before {
-      content: "";
-      display: block;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      background-color: #ccc;
-    }
-
-    .toggle-mode input:checked + label:before {
-      background-color: #fff;
-    }
-
-    main {
-      margin-top: 60px;
-      padding: 20px;
-    }
-  </style>
-  <script>
-    function toggleMode() {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('dark');
-    }
-  </script>
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <div class="toggle-mode">
-      <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
-      <label for="mode-toggle"></label>
-    </div>
-  </nav>
-  <main>
-    <section id="home">
-      <h1>Welcome to my website!</h1>
-      <p>This is a responsive website with a navigation bar that supports light and dark mode.</p>
-    </section>
-    <section id="about">
-      <h1>About Me</h1>
-      <p>I'm a large language model, also known as a conversational AI or chatbot trained to be informative and comprehensive. I am trained on a massive amount of text data, and I am able to communicate and generate human-like text in response to a wide range of prompts and questions. For example, I can provide summaries of factual topics or create stories.</p>
-    </section>
-    <section id="contact">
-      <h1>Contact Me</h1>
-      <p>If you have any questions or comments, please feel free to contact me.</p>
-    </section>
-  </main>
+
+<ul>
+  <a href="#" class="logo">Logo</a>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a class="active" href="#home">Home</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
+  <h1>Fixed Top Navigation Bar</h1>
+  <h2>Scroll this page to see the effect</h2>
+  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+</div>
+
 </body>
 </html>
+
+
