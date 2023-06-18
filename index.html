@@ -35,6 +35,8 @@
       position: absolute;
       right: 0;
       top: 0;
+      display: flex;
+      align-items: center;
     }
 
     .toggle-mode input {
@@ -47,8 +49,9 @@
       height: 20px;
       width: 20px;
       border-radius: 50%;
-      display: block;
-      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 10px 10px 0 0;
     }
 
@@ -59,14 +62,15 @@
       width: 10px;
       border-radius: 50%;
       background-color: #ccc;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .toggle-mode input:checked + label:before {
       background-color: #fff;
+    }
+
+    main {
+      margin-top: 60px;
+      padding: 20px;
     }
   </style>
   <script>
@@ -77,13 +81,13 @@
   </script>
 </head>
 <body>
-  <nav class="navbar">
+  <nav>
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
     <div class="toggle-mode">
       <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
-      <label for="mode-toggle">Light/Dark Mode</label>
+      <label for="mode-toggle"></label>
     </div>
   </nav>
   <main>
